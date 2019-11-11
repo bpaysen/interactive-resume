@@ -41,16 +41,18 @@ const educationText = {
 
 const leftColText = {
 	color: "Black",
-  	fontSize: 14,
-  	fontWeight: .9,
-  	lineHeight: 1.5,
+  	fontSize: 16,
+  	fontFamily: "Didact Gothic",
+  	fontWeight: .1,
+  	lineHeight: 1.7,
   	textAlign: 'left'
 }
 const rightColText ={
 	color: "Black",
-  	fontSize: 14,
+  	fontSize: 16,
+  	fontFamily: "Didact Gothic",
   	fontWeight: .9,
-  	lineHeight: 1.5,
+  	lineHeight: 1.7,
   	textAlign: 'left'
 }
 const locIcon ={

@@ -11,27 +11,28 @@ const DataLeft = {
     { name: 'Semantic Framework', score: 5},
     { name: 'JSON', score: 5},
     { name: 'JQuery', score: 4},
-    { name: 'Ruby on Rails', score: 4 },
+    { name: 'React.JS, SPAs', score: 4 },
     { name: 'SQL, MySQL', score: 4 },
     { name: 'Test-driven Development', score: 4 },    
-    { name: 'Bash, Vim, Less, Regex', score: 4}
+    { name: 'REST, RESTful APIs', score: 4},
+    { name: 'AWS', score: 3}
   	]
   };
 
  const DataRight = {
   		skillsRight : [
-  	{ name: 'React.JS, SPAs', score: 4},
+  	{ name: 'Ruby on Rails', score: 4},
   	{ name: 'Python, Flask', score: 4 },
   	{ name: 'Github', score: 4},
     { name: 'OOP, ORM, MVC', score: 4},
     { name: 'HTTP Protocol', score: 4},
-    { name: 'REST', score: 4},
+    { name: 'Bash, Vim, Less, SSH, Regex', score: 4},
     { name: 'Documentation', score: 4 },
     { name: 'Network Communication', score: 3},
     { name: 'Optimizely / AB Tests', score: 3 },
     { name: 'Redux, Firebase', score: 3},
 	{ name: 'IoT, Telematics programming', score: 3}, 
-    { name: 'AWS', score: 2}
+    { name: 'I/O mapping, serial comm.', score: 3}
   	]
   };
 

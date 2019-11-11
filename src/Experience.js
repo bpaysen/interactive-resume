@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import {Grid, Segment, Icon, Responsive, Divider} from 'semantic-ui-react';
 
 
@@ -20,9 +21,6 @@ const expLine = {
     marginBottom: 60
 }
 
-const expDescription = {
-	color: '#6d8687'
-}
 const EducationBlock = {
 	marginBottom: 20
 }
@@ -45,7 +43,7 @@ const rightColText ={
   	fontSize: 14,
   	fontWeight: .3,
   	lineHeight: 1.2,
-  	textAlign: 'justify'
+  	textAlign: 'left'
 }
 const locIcon ={
 	color: '#757b7d',
@@ -96,17 +94,17 @@ const Experience =
 					style={rightColText}
 					>
 					<h4><b>Engineer - Full Time</b></h4>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span style={expDescription}>Testing and Development </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Testing and Development </span>
 						Contributed UI/UX changes to a Ruby on Rails site that addressed safer and more secure IoT device provisioning.
 						Expanded unit tests in Ruby, YAML, JavaScript, Active Record, MiniTest, RSpec, Simplecov and MySQL.
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span style={expDescription}>Automation </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Automation </span>
 						Built automation scripts in Ruby and Python that reduced data-entry tasks by about 75%.
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span style={expDescription}>Telematics Engineering </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Telematics Engineering </span>
 						Built tracking programs for asset tracking devices in automotive, last-Mile transportation (scooters and e-bikes) and containers.
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span style={expDescription}>Technical Support and Network Management </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Technical Support and Network Management </span>
 						Provided technical documentation, M2M provisioning, L3 support and expertise in network management, telecommunications and hardware for over 200K devices.
 					</p>
 					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> San Jose, CA</b></p>

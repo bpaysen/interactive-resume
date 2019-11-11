@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-images": "^1.0.0",
+    "react-parallax": "^2.2.4",
+    "react-photo-gallery": "^8.0.0",
     "react-scripts": "3.2.0",
     "react-scroll": "^1.7.14",
     "semantic-ui-css": "^2.4.1",

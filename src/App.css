@@ -1,7 +1,16 @@
 
+
+hr.coverLine {
+    background: linear-gradient(to right, transparent, green, white);
+    height: 2px;
+    border-radius: 5px;
+    margin: 10px 55px;
+
+}
+
+
 div.wrapper {
   margin: 0;
-
 }
 
 nav.vertical {
@@ -9,25 +18,40 @@ nav.vertical {
   text-align: center;
   padding: 20px;
 }
+
 ul.nav-items {
   align-items: center;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.nav-logo {
-  height: 50px;
-  width: 100px;
-  top: 10;
+#nav-logo {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
 }
 
-.nav-logo:hover {
+.chevy-up {
+  margin: 0px;
+  width: 170px;
+  height: 52px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+ .nav-content:hover > .chevy-up:hover {
+  background-color: rgb(117,123,125);
+
   cursor: pointer;
 }
+
 
 nav.vertical > div.nav-content {
   background-color: #b1cbcc;
   border-radius: 10px;
+  width: 170px;
 }
 
 nav.vertical > div > ul > li {
@@ -36,13 +60,7 @@ nav.vertical > div > ul > li {
 }
 
 nav.vertical > div > ul > li .anchor {
-/*  background-color: #b1cbcc;
-  background-image: -webkit-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
-  background-image: -moz-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
-  background-image: -o-linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));
-  background-image: linear-gradient(135deg, rgb(114, 51, 98), rgb(157, 34, 60));*/
-  /*border-bottom: 1px solid rgba(255,255,255,.1);*/
-/*  box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);*/
+
   border-style: solid;
   border-width: 2px 0px 0px 0px;
   color: rgb(255,255,255);
@@ -307,6 +325,17 @@ nav.vertical > div > ul > li .contactAnchor:hover {
    91%, 96% {
      transform: translate3d(0, -40px, 0);
   }
+}
+
+.expDescription {
+  animation: glow 1.2s infinite alternate;
+  color: "#6d8687";
+  font-weight: bold;
+}
+@keyframes glow {
+    to {
+        text-shadow: 0 0 1px ;
+    }
 }
 
 .skillStar {

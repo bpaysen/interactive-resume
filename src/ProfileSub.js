@@ -29,7 +29,7 @@ const profileSub =
 		      <li className="cement__container__list__item">a <i>Full Stack</i> Engineer</li>
 		      <li className="cement__container__list__item">an <i>Application</i> Developer</li>
 		      <li className="cement__container__list__item">a <i>Software</i> Engineer</li>
-		      <li className="cement__container__list__item">a <i>Classical Musician</i></li>
+		      <li className="cement__container__list__item">a <i>Classical Musician 🎶</i></li>
 		    </ul>
 		  </div>
 		</div>

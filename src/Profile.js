@@ -9,13 +9,15 @@ const profileBorder = {
 	borderWidth: 10,
 	borderColor: "#b1cbcc",
 	padding:0,
+	background: '#b1cbcc'
 }
 
 const profileLine = {
 	background: "#b1cbcc",
     width: 800,
     margin: 'auto',
-    marginBottom: 60
+    marginBottom: 60,
+    zIndex: 0,
 }
 
 const AboutMeText = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Icon } from 'semantic-ui-react';
 
 export default class Navbar extends Component {
   scrollToTop = () => {
@@ -12,12 +12,13 @@ export default class Navbar extends Component {
       <div className="wrapper">
 	      <nav className="vertical" id="navbar">
 	        <div className="nav-content">
-	          <img
-	            src={logo}
-	            className="nav-logo"
-	            alt="Logo"
-	            onClick={this.scrollToTop}
-	          />
+		        <div className="chevy-up" onClick={this.scrollToTop}>
+		      	  <Icon name="angle double up"
+		      	  	size="large"
+		            id="nav-logo"
+		            alt="Logo"
+		          />
+	          </div>
 	          <ul className="nav-items">
 	            <li className="nav-item">
 	              <Link
@@ -75,7 +76,7 @@ export default class Navbar extends Component {
 	              <Link	              	
 	              	className="contactAnchor"
 	                activeClass="active"
-	                to="section5"
+	                to="contact"
 	                spy={true}
 	                smooth={true}
 	                offset={0}
