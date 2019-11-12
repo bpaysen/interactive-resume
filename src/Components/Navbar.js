@@ -18,7 +18,7 @@ export default class Navbar extends Component {
 		            id="nav-logo"
 		            alt="Logo"
 		          />
-	          </div>
+	          	</div>
 	          <ul className="nav-items">
 	            <li className="nav-item">
 	              <Link

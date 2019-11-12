@@ -5,9 +5,88 @@ hr.coverLine {
     height: 2px;
     border-radius: 5px;
     margin: 10px 55px;
-
 }
 
+nav.vertical > div.jumpContent {
+background-color: #9dc5c3;
+background-image: linear-gradient(360deg, #9dc5c3 0%, #5e795c 64%);
+/*  opacity: .5;*/
+  border-radius: 10px;
+  width: 170px;
+}
+
+#jumpButton {
+  margin: 0px;
+  width: 170px;
+  height: 52px;
+  border-radius:10px;
+  align-items: center;
+}
+ 
+ div.jumpContent:hover > #jumpButton:hover {
+  background-color: rgb(117,123,125);
+  cursor: pointer;
+}
+
+#bounce {
+    -webkit-animation: bounce 2s;
+    animation: bounce 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    margin: 0 auto;
+    color: white;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+  }
+  60% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+}
+
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-16px);
+    }
+    60% {
+        transform: translateY(-12px);
+    }
+}
+
+nav.vertical > div > div .anchor {
+
+/*  border-style: solid;*/
+  border-width: 2px 0px 0px 0px;
+  color: rgb(255,255,255);
+  display: block;
+  font-size: .90rem;
+  font-weight: 600;
+  letter-spacing: .5rem;
+  line-height: 50px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+  text-transform: uppercase;
+  transition: all .1s ease;
+  text-decoration: none;
+}
 
 div.wrapper {
   margin: 0;

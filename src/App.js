@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Parallax } from "react-parallax";
 import image1 from './tree-bg-resume.jpg';
+import JumpButton from "./Components/JumpButton"
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
 import profile from "./Profile";
@@ -22,6 +23,17 @@ const insideStyles = {
   zIndex: 0  
 };
 
+const jumpButtonStyle = {
+  borderRadius: 10,
+  borderStyle: 'none',
+  padding: 0,
+  marginTop: 0,
+  top: 900,
+  width: 140,
+  right: 80,
+  zIndex: 2
+  };
+
 class App extends Component {
   contextRef = createRef();
   render() {
@@ -32,7 +44,17 @@ class App extends Component {
             <Grid className="App" centered columns={1}>
               <Ref innerRef={this.contextRef}>
                 <div style={{ height: 1000}}>
+                  <Rail className='ui right internal close rail'>
+                      <Responsive as={Segment}
+                            className="vertical buttons"
+                            style={ jumpButtonStyle } 
+                            context={this.contextRef}
+                            size="massive"
+                            >
+                            <JumpButton />  
+                        </Responsive>
 
+                  </Rail>
                   <div style={insideStyles}>
                    <Responsive as={Segment} 
                       basic
