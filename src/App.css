@@ -7,6 +7,16 @@ hr.coverLine {
     margin: 10px 55px;
 }
 
+.quoteText = {
+    color: "#b1cbcc";
+    font-size: 36;
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+    text-align: 'center';
+    font-style: 'italic';
+    padding: 20;
+}
+
 nav.vertical > div.jumpContent {
 background-color: #9dc5c3;
 background-image: linear-gradient(360deg, #9dc5c3 0%, #5e795c 64%);
@@ -194,11 +204,24 @@ nav.vertical > div > ul > li .contactAnchor:hover {
   color: white;
 }
 
+div.lastSection {
+  background-color: grey;
+}
+
 .section-content {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px;
 }
+
+div#projects.section-content {
+  max-width: 1000px !important ;
+}
+
+div#profile > p > q {
+  color: transparent;
+}
+
 
 .cement {
    position: absolute;
@@ -278,28 +301,34 @@ nav.vertical > div > ul > li .contactAnchor:hover {
   }
 }
  @-webkit-keyframes change {
-   0%, 9%, 100% {
+    0%, 9%, 100% {
      transform: translate3d(0, 0, 0);
   }
-   13%, 22% {
+   14%, 19% {
      transform: translate3d(0, -40px, 0);
   }
-   26%, 35% {
+    23%, 28% {
      transform: translate3d(0, -80px, 0);
   }
-   39%, 48% {
+   32%, 37% {
      transform: translate3d(0, -120px, 0);
   }
-  52%, 61% {
+    41%, 46% {
      transform: translate3d(0, -160px, 0);
   }
-   65%, 74% {
+    52%, 57% {
+     transform: translate3d(0, -200px, 0);
+  }
+   61%, 66% {
+     transform: translate3d(0, -160px, 0);
+  }
+   70%, 75% {
      transform: translate3d(0, -120px, 0);
   }
-   78%, 87% {
+   79%, 84% {
      transform: translate3d(0, -80px, 0);
   }
-   91%, 96% {
+  88%, 93% {
      transform: translate3d(0, -40px, 0);
   }
 }
@@ -312,28 +341,34 @@ nav.vertical > div > ul > li .contactAnchor:hover {
   }
 }
 @-o-keyframes change {
-   0%, 9%, 100% {
+    0%, 9%, 100% {
      transform: translate3d(0, 0, 0);
   }
-   13%, 22% {
+   14%, 19% {
      transform: translate3d(0, -40px, 0);
   }
-   26%, 35% {
+    23%, 28% {
      transform: translate3d(0, -80px, 0);
   }
-   39%, 48% {
+   32%, 37% {
      transform: translate3d(0, -120px, 0);
   }
-  52%, 61% {
+    41%, 46% {
      transform: translate3d(0, -160px, 0);
   }
-   65%, 74% {
+    52%, 57% {
+     transform: translate3d(0, -200px, 0);
+  }
+   61%, 66% {
+     transform: translate3d(0, -160px, 0);
+  }
+   70%, 75% {
      transform: translate3d(0, -120px, 0);
   }
-   78%, 87% {
+   79%, 84% {
      transform: translate3d(0, -80px, 0);
   }
-   91%, 96% {
+  88%, 93% {
      transform: translate3d(0, -40px, 0);
   }
 }
@@ -346,28 +381,34 @@ nav.vertical > div > ul > li .contactAnchor:hover {
   }
 }
  @-moz-keyframes change {
-   0%, 9%, 100% {
+    0%, 9%, 100% {
      transform: translate3d(0, 0, 0);
   }
-   13%, 22% {
+   14%, 19% {
      transform: translate3d(0, -40px, 0);
   }
-   26%, 35% {
+    23%, 28% {
      transform: translate3d(0, -80px, 0);
   }
-   39%, 48% {
+   32%, 37% {
      transform: translate3d(0, -120px, 0);
   }
-  52%, 61% {
+    41%, 46% {
      transform: translate3d(0, -160px, 0);
   }
-   65%, 74% {
+    52%, 57% {
+     transform: translate3d(0, -200px, 0);
+  }
+   61%, 66% {
+     transform: translate3d(0, -160px, 0);
+  }
+   70%, 75% {
      transform: translate3d(0, -120px, 0);
   }
-   78%, 87% {
+   79%, 84% {
      transform: translate3d(0, -80px, 0);
   }
-   91%, 96% {
+  88%, 93% {
      transform: translate3d(0, -40px, 0);
   }
 }
@@ -380,41 +421,56 @@ nav.vertical > div > ul > li .contactAnchor:hover {
   }
 }
  @keyframes change {
-   0%, 9%, 100% {
+    0%, 9%, 100% {
      transform: translate3d(0, 0, 0);
   }
-   13%, 22% {
+   14%, 19% {
      transform: translate3d(0, -40px, 0);
   }
-   26%, 35% {
+    23%, 28% {
      transform: translate3d(0, -80px, 0);
   }
-   39%, 48% {
+   32%, 37% {
      transform: translate3d(0, -120px, 0);
   }
-  52%, 61% {
+    41%, 46% {
      transform: translate3d(0, -160px, 0);
   }
-   65%, 74% {
+    52%, 57% {
+     transform: translate3d(0, -200px, 0);
+  }
+   61%, 66% {
+     transform: translate3d(0, -160px, 0);
+  }
+   70%, 75% {
      transform: translate3d(0, -120px, 0);
   }
-   78%, 87% {
+   79%, 84% {
      transform: translate3d(0, -80px, 0);
   }
-   91%, 96% {
+  88%, 93% {
      transform: translate3d(0, -40px, 0);
   }
 }
 
 .expDescription {
   animation: glow 1.2s infinite alternate;
-  color: "#6d8687";
+  color: #454745;
   font-weight: bold;
 }
 @keyframes glow {
     to {
         text-shadow: 0 0 1px ;
     }
+}
+.expTech { 
+  color: #454745;
+  font-weight: bold;
+}
+
+h5 {
+  margin: 4px 0 0 0;
+
 }
 
 .skillStar {
@@ -430,18 +486,7 @@ nav.vertical > div > ul > li .contactAnchor:hover {
   z-index: 3;
 
 }
-.star-right:hover
-{
-/*  -webkit-transform: rotateY(180deg);
-  -webkit-transition: 0.9s;
-  -ms-transform: rotateY(180deg);
-  -ms-transition: 0.9s;
-  -webkit-transform: rotateY(180deg);
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
-  transform: rotateY(180deg);*/
 
-}
 .tech-list:hover
 {
   background: rgba(123, 174, 213, 0.3);

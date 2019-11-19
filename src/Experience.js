@@ -38,7 +38,7 @@ const leftColText = {
   	lineHeight: 1.2,
   	textAlign: 'left'
 }
-const rightColText ={
+const rightColText = {
 	color: "Black",
   	fontSize: 14,
   	fontWeight: .3,
@@ -48,6 +48,11 @@ const rightColText ={
 const locIcon ={
 	color: '#757b7d',
 }
+const linkStyle= {
+	color: '#757b7d'
+}
+
+
 const Experience =
 	<Grid centered columns={2}>
 
@@ -102,12 +107,64 @@ const Experience =
 						Built automation scripts in Ruby and Python that reduced data-entry tasks by about 75%.
 					</p>
 					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Telematics Engineering </span>
-						Built tracking programs for asset tracking devices in automotive, last-Mile transportation (scooters and e-bikes) and containers.
+						Built tracking programs for asset trackers in automotive, last-mile transportation (scooters and e-bikes) and other IoT.
 					</p>
 					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Technical Support and Network Management </span>
-						Provided technical documentation, M2M provisioning, L3 support and expertise in network management, telecommunications and hardware for over 200K devices.
+						Provided technical documentation, M2M provisioning, L3 support with expertise in network management, telecommunications and hardware for over 200K devices.
 					</p>
 					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> San Jose, CA</b></p>
+				</Segment>
+	  		</Grid.Column>
+	  	</Grid.Row>
+	  	<Grid.Row centered columns={2} style={EducationBlock}>		
+			<Grid.Column>
+			      <Segment 
+					className="experienceText"
+					basic 
+					textAlign='left'
+					style={leftColText}
+					>
+					<h3><b>Independent Web Developer</b></h3>
+					<p>July 2014 - Present</p>
+				</Segment>
+
+	  		</Grid.Column>
+	  		<Grid.Column>
+			    <Segment 
+					className="experienceText"
+					basic 
+					textAlign='left'
+					style={rightColText}
+					>
+					<h4><b>Designer, Founder, Front End _, Application _, Software _ and Full Stack Developer</b></h4>
+					<p className="experienceText"><span ><b>Projects:</b></span>
+						
+					</p>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Hunger an Homelessness Project </span>
+						<span className="expTech"> Technologies:</span> Ruby on Rails, JavaScript, PostgreSQL, AWS S3.
+						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
+						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Founder, Designer, Developer</b></h5>
+					</p>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Environmental HQ </span>
+						A periodical with curated articles and critical resources addressing our biggest threat of the century.
+						<span className="expTech"> Technologies:</span> React.JS, JavaScript, Emotion, Semantic, Netlify, Firebase.
+						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
+						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Founder, Designer, Developer</b></h5>
+					</p>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Industry-A-list </span>
+						A subscription website for connecting developers and entrepreneurs and investors. 
+						<span className="expTech"> Technologies:</span> Ruby on Rails, JavaScript, SaSS, HTML, JQuery, SQLite, Stripe API.
+						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
+						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Designer, Developer</b></h5>
+					</p>
+					
+
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Catch-of-the-Day </span>
+						A stateful React.Js website that displays a dynamic menu for a seafood restaurant, deployed using Firebase and a Node.Js backend.  
+						<span className="expTech">Technologies:</span> React.JS and Firebase
+						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
+						<h5 style={locIcon}> <Icon name="linkify" size="small" /><b><a style={linkStyle} href="https://catch-of-the-day.bpaysen.now.sh/">Go To site</a></b></h5>
+					</p>
 				</Segment>
 	  		</Grid.Column>
 	  	</Grid.Row>

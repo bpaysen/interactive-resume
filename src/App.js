@@ -11,6 +11,7 @@ import profileSub from "./ProfileSub";
 import Experience from "./Experience";
 import Abilities from "./Abilities";
 import Gallery from './Gallery'
+import contact from "./Contact"
 import { Grid, Ref, Responsive, Sticky, Rail, Segment } from 'semantic-ui-react';
 
 const insideStyles = {
@@ -28,7 +29,7 @@ const jumpButtonStyle = {
   borderStyle: 'none',
   padding: 0,
   marginTop: 0,
-  top: 900,
+  top: 875,
   width: 140,
   right: 80,
   zIndex: 2
@@ -104,15 +105,16 @@ class App extends Component {
                       />
                       <Section
                         title="Experience"
-                        quote="Tell me and I forget. Teach me and I remember. Involve me and I learn."
-                        attribution=" ―Xun Kuang"
+                        quote="Be a first-rate version of yourself, instead of a second-rate version of somebody else."
+                        attribution=" ―Judy Garland"
                         copy={Experience}
                         dark={true}
                         id="experience"
                       />
                     <Section
                         title="Abilities"
-                        quote=""
+                        quote="No good deed goes unpunished."
+                        attribution=" ―Oscar Wilde"
                         copy={Abilities}
                         dark={false}
                         id="abilities"
@@ -120,17 +122,21 @@ class App extends Component {
                       <Section
                         title="Projects"
                         quote="Courage is grace under pressure."
-                        attribution=" –Ernest Hemingway"
+                        attribution=" ―Ernest Hemingway"
                         copy={<Gallery />}
                         dark={true}
                         id="projects"
                       />
-                    <Section
-                      title="Contact"
-                      copy=""
-                      dark={false}
-                      id="contact"
-                    />
+                      <div className="lastSection">
+                        <Section
+                          title="Contact"
+                          quote="Not he who has much is rich, but he who gives much."
+                          attribution=" ―Erich Fromm"
+                          copy={contact}
+                          dark={false}
+                          id="contact"
+                        />
+                      </div>
                   </Responsive>
               </Ref>
           </Grid.Column>

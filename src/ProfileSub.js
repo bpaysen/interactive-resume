@@ -26,6 +26,7 @@ const profileSub =
 		    </p>
 		    <ul className="cement__container__list">
 		      <li className="cement__container__list__item"><i>a Front End</i> Developer</li>
+		      <li className="cement__container__list__item"><i>a Programmer</i></li>		      
 		      <li className="cement__container__list__item">a <i>Full Stack</i> Engineer</li>
 		      <li className="cement__container__list__item">an <i>Application</i> Developer</li>
 		      <li className="cement__container__list__item">a <i>Software</i> Engineer</li>
