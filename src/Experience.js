@@ -86,7 +86,7 @@ const Experience =
 					textAlign='left'
 					style={leftColText}
 					>
-					<h3><b>Premier Wireless Solutions | Service and Support</b></h3>
+					<h3><b>Premier Wireless Solutions</b></h3>
 					<p>June 2017 - Present</p>
 				</Segment>
 
@@ -98,18 +98,18 @@ const Experience =
 					textAlign='left'
 					style={rightColText}
 					>
-					<h4><b>Engineer - Full Time</b></h4>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Testing and Development </span>
+					<h4><b>Service and Support Engineer<br/>Web Developer - Full Time</b></h4>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Testing and Development </span><br/>
 						Contributed UI/UX changes to a Ruby on Rails site that addressed safer and more secure IoT device provisioning.
 						Expanded unit tests in Ruby, YAML, JavaScript, Active Record, MiniTest, RSpec, Simplecov and MySQL.
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Automation </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Automation </span><br/>
 						Built automation scripts in Ruby and Python that reduced data-entry tasks by about 75%.
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Telematics Engineering </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Telematics Engineering </span><br/>
 						Built tracking programs for asset trackers in automotive, last-mile transportation (scooters and e-bikes) and other IoT.
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Technical Support and Network Management </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Technical Support and Network Management </span><br/>
 						Provided technical documentation, M2M provisioning, L3 support with expertise in network management, telecommunications and hardware for over 200K devices.
 					</p>
 					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> San Jose, CA</b></p>
@@ -140,18 +140,18 @@ const Experience =
 					<p className="experienceText"><span ><b>Projects:</b></span>
 						
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Hunger an Homelessness Project </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Hunger an Homelessness Project </span><br/>
 						<span className="expTech"> Technologies:</span> Ruby on Rails, JavaScript, PostgreSQL, AWS S3.
 						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
 						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Founder, Designer, Developer</b></h5>
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Environmental HQ </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Environmental HQ </span><br/>
 						A periodical with curated articles and critical resources addressing our biggest threat of the century.
 						<span className="expTech"> Technologies:</span> React.JS, JavaScript, Emotion, Semantic, Netlify, Firebase.
 						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
 						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Founder, Designer, Developer</b></h5>
 					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Industry-A-list </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Industry-A-list </span><br/>
 						A subscription website for connecting developers and entrepreneurs and investors. 
 						<span className="expTech"> Technologies:</span> Ruby on Rails, JavaScript, SaSS, HTML, JQuery, SQLite, Stripe API.
 						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
@@ -159,7 +159,7 @@ const Experience =
 					</p>
 					
 
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Catch-of-the-Day </span>
+					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Catch-of-the-Day </span><br/>
 						A stateful React.Js website that displays a dynamic menu for a seafood restaurant, deployed using Firebase and a Node.Js backend.  
 						<span className="expTech">Technologies:</span> React.JS and Firebase
 						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
