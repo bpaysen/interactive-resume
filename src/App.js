@@ -37,12 +37,19 @@ class App extends Component {
   contextRef = createRef();
   render() {
     return (
-      <div>
-        <div>
-          <Parallax bgImage={image1} alt="Landscape with tree by Bessi from Pixabay" strength={500} blur={{ min: -1, max: 2 }} bgImageStyle={{ opacity: '.8' }}>
-            <Grid className="App" centered columns={1}>
+      <div className="container">
+        <div className="refDiv">
+          <Parallax 
+            bgImage={image1}
+            alt="Landscape with tree by Bessi from Pixabay"
+            strength={500}
+            blur={{ min: -1, max: 2 }}
+            bgImageStyle={{ 
+              opacity: '.8'}}
+            >
+            <Grid className="App"centered columns={1}>
 
-                <div style={{ height: 1000}}>
+                <div style={{ height: 1200}}>
                     <Responsive as={Segment}
                           className="vertical buttons"
                           style={ jumpButtonStyle } 
@@ -55,25 +62,37 @@ class App extends Component {
                   <div style={insideStyles}>
                    <Responsive as={Segment} 
                       basic
-                      size={"large"}
+                      size={"small"}
                       style={{
-                        height: 40,
-                        width: 520,
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%,-50%)",
                         color: "white",
-                        fontSize: 70,
-                        top: 20}}
+                        fontSize: "5vw",
+                        padding: ".2em"}}
                       className="coverText">Ben Paysen
                     </Responsive>
-                    <div style={{height: -100}}><hr className="coverLine" /></div>
                     <Responsive as={Segment} 
                       basic
-                      size={"large"}
+                      size={"small"}
                       style={{
-                        height: 20,
-                        width: 520,
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%,-50%)",
+                        }}
+                      ><hr className="coverLine" />
+                      </Responsive>
+                    <Responsive as={Segment} 
+                      basic
+                      size={"small"}
+                      style={{
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%,-50%)",
+                        lineHeight: .9,
                         color: "white",
-                        fontSize: 30,
-                        bottom: 25}}
+                        fontSize: "2.5vw",
+}}
                       className="coverSubText"><i>interactive resume</i>
                     </Responsive>
                   </div>
