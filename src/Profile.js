@@ -55,10 +55,9 @@ const profile =
       			<Menu.Item header style={AboutMeText}>
       				About Me
       			</Menu.Item>
-      			<Menu.Item style={AboutMeSubText}>I am a creative full stack web developer with professional experience pushing code to production.
-      			 	I am passionate for responsive web design, test-driven development and performant code.
-      				I have experience in JavaScript, Ruby on Rails, React.JS, Python, ES6, CSS3, HTML5, AWS and more. 
-      				I enjoy finding solutions to tough problems, learning new tech, and working with teams.
+      			<Menu.Item style={AboutMeSubText}>I am a full stack web developer and designer. I am passionate for responsive web design,
+      			   test-driven development and performant code. I have experience in JavaScript, Ruby on Rails, React.JS, Python, ES6, CSS3,
+      			   HTML5, AWS and more. I enjoy finding solutions to tough problems, learning new tech, and working with like-minded teams.
 				</Menu.Item>
       		</Menu>
       	</Grid.Column>

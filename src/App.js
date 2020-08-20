@@ -28,7 +28,6 @@ const jumpButtonStyle = {
   borderStyle: 'none',
   padding: 0,
   margin: 'auto',
-  // top: 875,
   width: 140,
   zIndex: 2
   };
@@ -49,7 +48,7 @@ class App extends Component {
             >
             <Grid className="App"centered columns={1}>
 
-                <div style={{ height: 1200}}>
+                <div style={{ height: 1024}}>
                     <Responsive as={Segment}
                           className="vertical buttons"
                           style={ jumpButtonStyle } 
@@ -93,7 +92,7 @@ class App extends Component {
                         color: "white",
                         fontSize: "2.5vw",
 }}
-                      className="coverSubText"><i>interactive resume</i>
+                      className="coverText"><i>interactive resume</i>
                     </Responsive>
                   </div>
 
@@ -101,7 +100,6 @@ class App extends Component {
 
             </Grid>
           </Parallax>
-                      {/*Close all tags above here*/}
               <Grid>
                 <Grid.Column>
                   <Ref innerRef={this.contextRef}>

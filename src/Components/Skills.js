@@ -4,18 +4,18 @@ import { Icon } from 'semantic-ui-react';
 
 const DataLeft = {
 		skillsLeft : [
-    { name: 'JavaScript, (ES5 - ES6)', score: 5 },
-    { name: 'CSS(3)', score: 5},
-    { name: 'HTML(5)', score: 5},
-    { name: 'Bootstrap Framework', score: 5},
-    { name: 'Semantic Framework', score: 5},
-    { name: 'JSON', score: 5},
-    { name: 'JQuery', score: 4},
-    { name: 'React.JS, SPAs', score: 4 },
-    { name: 'SQL, MySQL', score: 4 },
-    { name: 'Test-driven Development', score: 4 },    
-    { name: 'REST, RESTful APIs', score: 4},
-    { name: 'AWS', score: 3}
+    { name: 'JavaScript, (ES5 - ES6)', score: 4 },
+    { name: 'CSS(3)', score: 4},
+    { name: 'HTML(5)', score: 4},
+    { name: 'Bootstrap Framework', score: 4},
+    { name: 'Semantic Framework', score: 4},
+    { name: 'JSON', score: 4},
+    { name: 'JQuery', score: 3},
+    { name: 'React.JS, SPAs', score: 3 },
+    { name: 'SQL, MySQL', score: 3 },
+    { name: 'Test-driven Development', score: 3 },    
+    { name: 'REST, RESTful APIs', score: 3},
+    { name: 'AWS', score: 2}
   	]
   };
 
@@ -26,13 +26,13 @@ const DataLeft = {
   	{ name: 'Github', score: 4},
     { name: 'OOP, ORM, MVC', score: 4},
     { name: 'HTTP Protocol', score: 4},
-    { name: 'Bash, Vim, Less, SSH, Regex', score: 4},
-    { name: 'Documentation', score: 4 },
-    { name: 'Network Communication', score: 3},
-    { name: 'Optimizely / AB Tests', score: 3 },
-    { name: 'Redux, Firebase', score: 3},
-	{ name: 'IoT, Telematics programming', score: 3}, 
-    { name: 'I/O mapping, serial comm.', score: 3}
+    { name: 'Bash, Vim, Less, SSH, Regex', score: 3},
+    { name: 'Documentation', score: 3 },
+    { name: 'Network Communication', score: 2},
+    { name: 'Optimizely / AB Tests', score: 2 },
+    { name: 'Redux, Firebase', score: 2},
+	{ name: 'IoT, Telematics programming', score: 2}, 
+    { name: 'I/O mapping, serial comm.', score: 2}
   	]
   };
 
