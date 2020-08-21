@@ -104,7 +104,7 @@ const Experience =
 						Expanded unit tests in Ruby, YAML, JavaScript, Active Record, MiniTest, RSpec, Simplecov and MySQL.
 					</p>
 					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Automation </span><br/>
-						Built automation scripts in Ruby and Python that reduced data-entry tasks by about 75%.
+						Built automation scripts in Ruby and Python that reduced data-entry tasks by 75%.
 					</p>
 					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Telematics Engineering </span><br/>
 						Built tracking programs for asset trackers in automotive, last-mile transportation (scooters and e-bikes) and other IoT.
