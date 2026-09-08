@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "@emotion/styled/macro";
+import styled from "@emotion/styled";
 import { Grid, Responsive, Divider } from "semantic-ui-react";
 
 
@@ -82,27 +82,7 @@ const MusicBg = styled.div({
   height: "250px",
   margin: "20px",
   cursor: "pointer",
-  backgroundImage: "url(/valentino-funghi-VRr9a2rOoBI-unsplash.JPG)",
-  [`:hover ${DisplayOver}`]: {
-  	backgroundColor: "rgba(0,0,0,.5)",
-  },
-  [`:hover ${SubTitle}, :hover ${Paragraph}`]: {
-    transform: "translate3d(0,0,0)",
-  },
-  [`:hover ${Hover}`]: {
-    opacity: 1,
-  },
-});
-const PhotojournalSite = styled.div({
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  color: "#FFF",
-  position: "relative",
-  width: "400px",
-  height: "250px",
-  margin: "20px",
-  cursor: "pointer",
-  backgroundImage: "url(/Julian_website_background.jpg)",
+  backgroundImage: "url(/valentino-funghi-VRr9a2rOoBI-unsplash.jpg)",
   [`:hover ${DisplayOver}`]: {
   	backgroundColor: "rgba(0,0,0,.5)",
   },
@@ -174,20 +154,6 @@ class Gallery extends Component {
         </Grid.Row>
 
         <Grid.Row>
-  				<Grid.Column className="PhotojournalSite" >
-  					<PhotojournalSite>
-  						<DisplayOver>
-  							<BigTitle>A Photojournal to celebrate my son</BigTitle>
-  							<Hover>
-  								<SubTitle>A photo catalogue.</SubTitle>
-  								<Paragraph>
-  									Tags: Design, Development, React.js, Semantic, Lightbox, Now.sh, 
-  								</Paragraph>
-  								<CTA>visit website +</CTA>
-  							</Hover>
-  						</DisplayOver>
-  					</PhotojournalSite>
-  				</Grid.Column>
           <Grid.Column className="HungerOutreachSite" >
             <HungerOutreachSite alt="Photo by Saketh Garuda on Unsplash">
               <DisplayOver>

@@ -702,6 +702,7 @@ work and technical evolution.
 They should have lower visual priority than current work but retain much of their
 original personality.
 
+
 ### Environmental Activism
 
 Preserve.
@@ -733,12 +734,9 @@ Ruby on Rails · JavaScript · PostgreSQL · AWS S3
 
 ### Photojournal
 
-Decision: REVIEW
+Decision: APPROVED
 
-Personal React-based photojournal project.
-
-Retain only if Ben still wants this personal project publicly featured.
-It could alternatively appear in a smaller "Experiments & Personal Work" group.
+We’ve made the decision now, so there’s no reason to keep it in the V2 plan.
 
 ---
 

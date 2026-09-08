@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Grid, Icon} from 'semantic-ui-react';
-import styled from "@emotion/styled/macro";
 import style from './style.js';
 
 
