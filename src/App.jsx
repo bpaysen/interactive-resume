@@ -36,7 +36,7 @@ class App extends Component {
   contextRef = createRef();
   render() {
     return (
-      <div className="container">
+      <div className="container" id="top">
         <div className="refDiv">
           <Parallax 
             bgImage={image1}

@@ -1,94 +1,29 @@
-import React, { Component } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { Icon } from 'semantic-ui-react';
+import React from "react";
 
-export default class Navbar extends Component {
-  scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+const navigation = [
+  { href: "#profile", label: "Profile" },
+  { href: "#experience", label: "Experience" },
+  { href: "#abilities", label: "Abilities" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
-  render() {
-    return (
-      <div className="wrapper">
-	      <nav className="vertical" id="navbar">
-	        <div className="nav-content">
-		        <div className="chevy-up" onClick={this.scrollToTop}>
-		      	  <Icon name="angle double up"
-		      	  	size="large"
-		            id="nav-logo"
-		            alt="Logo"
-		          />
-	          	</div>
-	          <ul className="nav-items">
-	            <li className="nav-item">
-	              <Link
-	              	className="anchor"
-	                activeClass="active"
-	                to="profile"
-	                spy={true}
-	                smooth={true}
-	                offset={0}
-	                duration={500}
-	              >
-	                Profile
-	              </Link>
-	            </li>
-	            <li className="nav-item">
-	              <Link
-	              	className="anchor"
-	                activeClass="active"
-	                to="experience"
-	                spy={true}
-	                smooth={true}
-	                offset={0}
-	                duration={500}
-	              >
-	                Experience
-	              </Link>
-	            </li>
-	            <li className="nav-item">
-	              <Link
-	              	className="anchor"
-	                activeClass="active"
-	                to="abilities"
-	                spy={true}
-	                smooth={true}
-	                offset={0}
-	                duration={500}
-	              >
-	                Abilities
-	              </Link>
-	            </li>
-	            <li className="nav-item">
-	              <Link
-	              	className="anchor"
-	                activeClass="active"
-	                to="projects"
-	                spy={true}
-	                smooth={true}
-	                offset={0}
-	                duration={500}
-	              >
-	                Projects
-	              </Link>
-	            </li>
-	            <li className="nav-item">
-	              <Link	              	
-	              	className="contactAnchor"
-	                activeClass="active"
-	                to="contact"
-	                spy={true}
-	                smooth={true}
-	                offset={0}
-	                duration={500}
-	              >
-	                Contact
-	              </Link>
-	            </li>
-	          </ul>
-	        </div>
-	      </nav>
-      </div>
-    );
-  }
+export default function Navbar() {
+  return (
+    <nav className="site-nav" aria-label="Resume navigation">
+      <a href="#top" className="site-nav__top" aria-label="Back to top">
+        <span aria-hidden="true">⌃</span>
+      </a>
+
+      <ul className="site-nav__items">
+        {navigation.map(({ href, label }) => (
+          <li key={href}>
+            <a href={href} className="site-nav__link">
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 }
