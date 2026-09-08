@@ -5,21 +5,18 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-images": "^1.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-parallax": "^2.2.4",
-    "react-photo-gallery": "^8.0.0",
-    "react-scripts": "3.2.0",
     "react-scroll": "^1.7.14",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1"
   },
   "scripts": {
-  "dev": "vite",
-  "start": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,7 +34,6 @@
     ]
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^6.1.1",
     "vite": "^8.2.2"
   }
 }
