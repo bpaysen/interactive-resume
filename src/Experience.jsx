@@ -1,343 +1,145 @@
 import React from "react";
-import "./App.css";
-import {Grid, Segment, Icon, Responsive, Divider} from 'semantic-ui-react';
 
+const career = [
+  {
+    company: "Accel IQ",
+    title: "Founder · Product & Solutions Architect",
+    dates: "2024–Present",
+    summary:
+      "Design and build AI-enabled products, agentic workflows, integrations, data systems, and operational automation for B2B organizations.",
+    highlights: [
+      "Architect 0-to-1 AI and automation systems using agents, APIs, SDKs, webhooks, LLM platforms, and custom integrations.",
+      "Build systems spanning CRM, Customer Success, GTM operations, enrichment, data workflows, internal tooling, and business automation.",
+      "Work from technical discovery and architecture through prototyping, implementation, testing, deployment, and production iteration.",
+      "Delivered AI and automation implementations across more than 50 client engagements.",
+    ],
+    technologies:
+      "Applied AI · Python · APIs · Webhooks · OpenAI · Anthropic · n8n · Make · Zapier · Data & CRM Integrations",
+  },
+  {
+    company: "OptConnect",
+    title: "Senior Account Executive · Product Lead · Solutions Engineer",
+    dates: "2022–2025",
+    summary:
+      "Led technically complex enterprise SaaS and IoT engagements from discovery through implementation, working across customers, engineering, product, infrastructure, operations, security, and executive stakeholders.",
+    highlights: [
+      "Designed solution architectures, implementation strategies, technical playbooks, proofs of concept, and deployment plans.",
+      "Worked with engineering to validate, test, troubleshoot, and move customer-facing solutions from development into production.",
+      "Influenced product strategy, workflows, and technical infrastructure based on enterprise requirements.",
+      "Combined technical solution ownership with commercial responsibility for large enterprise engagements and earned three consecutive President’s Club awards.",
+    ],
+    technologies:
+      "SaaS · IoT · Solution Architecture · Technical Discovery · POCs · Deployment · Networking · Product Strategy",
+  },
+  {
+    company: "Premier Wireless Solutions",
+    companyNote: "Acquired by OptConnect",
+    title: "Product Manager · Solutions Engineer · Account Manager",
+    dates: "2017–2022",
+    summary:
+      "Worked across software development, IoT infrastructure, solution engineering, product management, technical support, and customer implementation.",
+    highlights: [
+      "Managed two technical software platforms from customer discovery and feature definition through implementation, testing, deployment, and production iteration.",
+      "Designed software solutions, technical integrations, and implementation strategies around customer requirements.",
+      "Partnered with engineering throughout the software development lifecycle, contributing to full-stack development, testing, debugging, deployment, and continuous improvement.",
+      "Worked across OEM, network, channel, and enterprise integrations while serving as a technical advisor to customers and internal teams.",
+    ],
+    technologies:
+      "Ruby on Rails · JavaScript · Python · SQL · Networking · Provisioning · IoT · Automation",
+  },
+  {
+    company: "Independent Web Development",
+    title: "Designer · Developer",
+    dates: "2014–2021",
+    summary:
+      "Built independent applications and experiments that established the hands-on software-development foundation for later work in product, solutions engineering, integrations, and applied AI.",
+    highlights: [],
+    technologies:
+      "React · JavaScript · Ruby on Rails · APIs · Databases · Cloud Deployment · UI/UX",
+  },
+];
 
+export default function Experience() {
+  return (
+    <div className="experience">
+      <section className="experience-group" aria-labelledby="career-heading">
+        <div className="experience-group-heading">
+          <h3 id="career-heading">Career</h3>
+          <p>
+		  Over time, my work has expanded from hands-on software development into
+		  solutions engineering, product leadership, enterprise implementation, and
+		  applied AI architecture. Across each stage, the common thread has been
+		  translating complex business needs into systems that can be built,
+		  deployed, and adopted.
+		  </p>
+        </div>
 
-const experienceText = {
-	color: "#6d8687",
-  	fontSize: 60,
+        <div className="career-timeline">
+          {career.map((role) => (
+            <article className="career-entry" key={`${role.company}-${role.dates}`}>
+              <div className="career-entry-meta">
+                <p className="career-dates">{role.dates}</p>
+                <h4>{role.company}</h4>
+
+                {role.companyNote && (
+                  <p className="career-company-note">{role.companyNote}</p>
+                )}
+              </div>
+
+              <div className="career-entry-content">
+                <h5>{role.title}</h5>
+
+                <p className="career-summary">{role.summary}</p>
+
+                {role.highlights.length > 0 && (
+                  <ul className="career-highlights">
+                    {role.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                )}
+
+                <p className="career-technologies">{role.technologies}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="experience-group education" aria-labelledby="education-heading">
+        <div className="experience-group-heading">
+          <h3 id="education-heading">Education</h3>
+          <p>
+            Formal music training and continued computer science / software
+            engineering study.
+          </p>
+        </div>
+
+        <div className="education-grid">
+          <article className="education-entry">
+            <p className="education-dates">2010–2013</p>
+            <h4>Rutgers University</h4>
+            <p>Doctoral studies — Music Performance, DMA (ABD)</p>
+          </article>
+
+          <article className="education-entry">
+            <p className="education-dates">2003 · 2001</p>
+            <h4>San Francisco Conservatory of Music</h4>
+            <p>Master of Music · Bachelor of Music — Performance</p>
+          </article>
+
+          <article className="education-entry education-entry-wide">
+            <p className="education-label">
+              Professional Studies & Technical Development
+            </p>
+            <h4>Computer Science & Software Engineering</h4>
+            <p>
+              University of Helsinki · Harvard CS50 · Dartmouth / Algorithms ·
+              Watch and Code · Udemy · independent project-based study
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+  );
 }
-const experienceSubText = {
-	color: "#b1cbcc",
-  	fontSize: 26,
-  	padding: 20,
-  	opacity: 0.9
-}
-const expLine = {
-	background: "#b1cbcc",
-    width: 'auto',
-    margin: 'auto',
-    marginBottom: 60
-}
-
-const EducationBlock = {
-	marginBottom: 20
-}
-const educationText = {
-	color: "#6d8687",
-  	fontSize: 32,
-  	padding: 15,
-  	marginTop: 20
-}
-
-const leftColText = {
-	color: "Black",
-  	fontSize: 14,
-  	fontWeight: .3,
-  	lineHeight: 1.2,
-  	textAlign: 'left'
-}
-const rightColText = {
-	color: "Black",
-  	fontSize: 14,
-  	fontWeight: .3,
-  	lineHeight: 1.2,
-  	textAlign: 'left'
-}
-const locIcon ={
-	color: '#757b7d',
-}
-const linkStyle= {
-	color: '#757b7d'
-}
-
-
-const Experience =
-	<Grid centered columns={2}>
-
-		<Grid.Row className="CareerRow" centered columns={2}>
-			<Responsive as={Divider} style={expLine}></Responsive>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={educationText}
-					>Career
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic
-					textAlign='left'
-					style={educationText}><Icon name='world' size="small" />
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-
-	  	<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>Premier Wireless Solutions</b></h3>
-					<p>June 2017 - Present</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Service and Support Engineer<br/>Web Developer - Full Time</b></h4>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Testing and Development </span><br/>
-						Contributed UI/UX changes to a Ruby on Rails site that addressed safer and more secure IoT device provisioning.
-						Expanded unit tests in Ruby, YAML, JavaScript, Active Record, MiniTest, RSpec, Simplecov and MySQL.
-					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Automation </span><br/>
-						Built automation scripts in Ruby and Python that reduced data-entry tasks by 75%.
-					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Telematics Engineering </span><br/>
-						Built tracking programs for asset trackers in automotive, last-mile transportation (scooters and e-bikes) and other IoT.
-					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Technical Support and Network Management </span><br/>
-						Provided technical documentation, M2M provisioning, L3 support with expertise in network management, telecommunications and hardware for over 200K devices.
-					</p>
-					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> San Jose, CA</b></p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-	  	<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>Independent Web Developer</b></h3>
-					<p>July 2014 - Present</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Designer, Founder, Front End _, Application _, Software _ and Full Stack Developer</b></h4>
-					<p className="experienceText"><span ><b>Projects:</b></span>
-						
-					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Hunger an Homelessness Project </span><br/>
-						<span className="expTech"> Technologies:</span> Ruby on Rails, JavaScript, PostgreSQL, AWS S3.
-						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
-						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Founder, Designer, Developer</b></h5>
-					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Environmental HQ </span><br/>
-						A periodical with curated articles and critical resources addressing our biggest threat of the century.
-						<span className="expTech"> Technologies:</span> React.JS, JavaScript, Emotion, Semantic, Netlify, Firebase.
-						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
-						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Founder, Designer, Developer</b></h5>
-					</p>
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Industry-A-list </span><br/>
-						A subscription website for connecting developers and entrepreneurs and investors. 
-						<span className="expTech"> Technologies:</span> Ruby on Rails, JavaScript, SaSS, HTML, JQuery, SQLite, Stripe API.
-						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
-						<h5 style={locIcon}> <Icon name="sliders horizontal icon" size="small" /><b>Designer, Developer</b></h5>
-					</p>
-					
-
-					<p className="experienceText"><Icon style={locIcon} name='code' size="small" /><span className="expDescription">Catch-of-the-Day </span><br/>
-						A stateful React.Js website that displays a dynamic menu for a seafood restaurant, deployed using Firebase and a Node.Js backend.  
-						<span className="expTech">Technologies:</span> React.JS and Firebase
-						<h5 style={locIcon}><Icon name='map marker alternate' size="small" /><b> San Fransisco Bay Area</b></h5>
-						<h5 style={locIcon}> <Icon name="linkify" size="small" /><b><a style={linkStyle} href="https://catch-of-the-day.bpaysen.now.sh/">Go To site</a></b></h5>
-					</p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-		<Grid.Row centered columns={2}>
-			<Responsive as={Divider} style={expLine}></Responsive>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={educationText}
-					>Education
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic
-					textAlign='left'
-					style={educationText}><Icon name='graduation cap' size="small" />
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-
-	  	<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>Harvard University</b></h3>
-					<p>January 2018 - March 2018</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Course - Intro to Computer Science <i>CS50</i> ( <Icon name='certificate' color='brown' size='small'/>)</b></h4>
-					<p>Program topics include: abstraction, algorithms, data structures, encapsulation, resource management,
-					 security, software engineering, and web development. Languages include C, PHP, 
-					 JavaScript, SQL, CSS, and HTML. Material inspired by real-world domains of biology, 
-					 cryptography, finance, forensics, and gaming.
-					</p>
-					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> Online</b></p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-		<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>Rutgers University</b></h3>
-					<p>September 2010 - June 2013</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Doctorate - Music Performance (DMA)</b></h4>
-					<p>Exceptional talent as a performer and the meeting of the School's technical standards,
-					a high level and quality of training and musicianship, a capacity for sustained, disciplined practice, the personal maturity of spirit essential for ensemble work,
-					broad and thoughtful interest in the world of music, including its historical traditions and contemporary trends, a clear dedication to artistic excellence,
-					and a desire to exercise artistic leadership.
-					</p>
-					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> New Brunswick, NJ</b></p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-	  		  	<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>Khan Academy, Dartmouth College</b></h3>
-					<p>January 2013 - March 2013</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Course - Intro to Algorithms (Thomas Cormen and Devin Balkcom</b></h4>
-					<p>Binary search, Asymptotic notation, Selection sort, Insertion sort, Recursive algorithms, Towers of Hanoi, Merge sort, 
-					Quick sort, Graph representation. Breadth-first search.
-					</p>
-					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> Online</b></p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-	  	<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>Watch and Code</b></h3>
-					<p>August 2016 - December 2016</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Course - Practical JavaScript (Premium)</b></h4>
-					<p>Mastering the building blocks of programming (functions, objects, and conditional logic) JavaScript, DOM manipulation, 
-					Data Types, Event Listeners, Documentation, RegEx, Recursion, Test-Driven Development, Advanced software engineering topics.
-
-					</p>
-					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> Online</b></p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>
-	  	<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<h3><b>The Complete Web Developer Bootcamp</b></h3>
-					<p>August 2016 - December 2016</p>
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="experienceText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<h4><b>Course - Udemy by Rob Dey ( <Icon name='certificate' color='brown' size='small'/>)</b></h4>
-					<p>Complete web development immersive course HTML, CSS, Javascript, HTTP Protocol, 
-					jQuery, Ruby, Ruby on Rails, Git, E-Commerce with Stripe API, Servers, Heroku, Bootstrap, SQL Databases, 
-					 Angular, Node.JS, CS Fundamentals, Test-Driven Development.
-					</p>
-					<p style={locIcon}><Icon name='map marker alternate' size="large" /><b> Online</b></p>
-				</Segment>
-	  		</Grid.Column>
-	  	</Grid.Row>	  	
-	</Grid>
-
-
-
-export default Experience;

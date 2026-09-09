@@ -1,48 +1,44 @@
 import React from "react";
 import "./App.css";
-import { Parallax } from "react-parallax";
 import image1 from "./tree-bg-resume.jpg";
 import JumpButton from "./Components/JumpButton";
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
-import profile from "./Profile";
-import profileSub from "./ProfileSub";
+import Profile from "./Profile";
+import ProfileSub from "./ProfileSub";
 import Experience from "./Experience";
 import Abilities from "./Abilities";
 import Gallery from "./Gallery";
-import contact from "./Contact";
+import Contact from "./Contact";
 
 export default function App() {
   return (
     <div className="container" id="top">
-      <Parallax
-        bgImage={image1}
-        alt="Landscape with tree by Bessi from Pixabay"
-        strength={500}
-        blur={{ min: -1, max: 2 }}
-        bgImageStyle={{ opacity: 0.8 }}
-      >
-        <header className="hero">
+      <div
+        className="hero-background"
+        style={{ backgroundImage: `url(${image1})` }}
+>
+          <header className="hero">
           <JumpButton />
 
-          <div className="hero-content">
-            <h1 className="hero-name">Ben Paysen</h1>
+            <div className="hero-content">
+              <h1 className="hero-name">Ben Paysen</h1>
 
-            <hr className="coverLine" />
+              <hr className="coverLine" />
 
-            <p className="hero-label">
-              <i>interactive resume</i>
-            </p>
-          </div>
-        </header>
-      </Parallax>
+                <p className="hero-label">
+                  <i>interactive resume</i>
+                </p>
+            </div>
+          </header>
+      </div>
 
       <div className="resume-layout">
         <main className="resume-main">
           <Section
             title="Profile"
-            quote={profileSub}
-            copy={profile}
+            quote={<ProfileSub />}
+            copy={<Profile />}
             dark={false}
             id="profile"
           />
@@ -51,16 +47,16 @@ export default function App() {
             title="Experience"
             quote="Be a first-rate version of yourself, instead of a second-rate version of somebody else."
             attribution=" ―Judy Garland"
-            copy={Experience}
+            copy={<Experience />}
             dark={true}
             id="experience"
           />
 
           <Section
-            title="Abilities"
+            title="Capabilities"
             quote="No good deed goes unpunished."
             attribution=" ―Oscar Wilde"
-            copy={Abilities}
+            copy={<Abilities />}
             dark={false}
             id="abilities"
           />
@@ -79,7 +75,7 @@ export default function App() {
               title="Contact"
               quote="Not he who has much is rich, but he who gives much."
               attribution=" ―Erich Fromm"
-              copy={contact}
+              copy={<Contact />}
               dark={false}
               id="contact"
             />

@@ -3,7 +3,7 @@ import React from "react";
 const navigation = [
   { href: "#profile", label: "Profile" },
   { href: "#experience", label: "Experience" },
-  { href: "#abilities", label: "Abilities" },
+  { href: "#abilities", label: "Capabilities" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];

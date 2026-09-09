@@ -1,116 +1,120 @@
-import React, {Components} from 'react';
-import { Grid, Responsive, Divider, Image, Segment, Button, Icon } from 'semantic-ui-react';
-import {LeftSkills, RightSkills} from './Components/Skills'
+import React from "react";
 
+const capabilityGroups = [
+  {
+    title: "Applied AI & Intelligent Systems",
+    items: [
+      "Agentic systems and AI agents",
+      "LLM-powered workflows",
+      "Retrieval and enrichment systems",
+      "Evaluation and reliability",
+      "Prompt and system design",
+      "Model selection and context management",
+    ],
+  },
+  {
+    title: "Software Engineering",
+    items: [
+      "Python",
+      "TypeScript / JavaScript",
+      "React / Next.js",
+      "Backend and full-stack development",
+      "REST APIs",
+      "SQL and relational data",
+      "Backend and full-stack application development",
+    ],
+  },
+  {
+    title: "Integrations & Data",
+    items: [
+      "API and SDK integrations",
+      "Webhooks",
+      "Data ingestion and transformation",
+      "Enrichment and reconciliation workflows",
+      "CRM and business-system integrations",
+      "Automation and orchestration",
+      "SaaS and IoT system integration",
+    ],
+  },
+  {
+  title: "Architecture, Product & Delivery",
+  items: [
+    "Technical discovery and requirements translation",
+    "Solution architecture",
+    "Rapid prototyping and proofs of concept",
+    "0-to-1 product development",
+    "Technical product management",
+    "Testing, validation, and production debugging",
+    "Deployment and system hardening",
+    "Enterprise solution design",
+    "Customer and stakeholder discovery",
+    "ROI / TCO modeling",
+    ],
+  },
+];
 
-const abilitesText = {
-	color: "#6d8687",
-  	fontSize: 60,
+const technologyGroups = [
+  {
+    label: "AI / Models",
+    items: "OpenAI · Anthropic / Claude · LLM APIs · retrieval systems",
+  },
+  {
+    label: "Development",
+    items:
+      "Python · TypeScript · JavaScript · React · Next.js · SQL · HTML · CSS · Git · GitHub",
+  },
+  {
+    label: "APIs / Data / Infrastructure",
+    items:
+      "REST APIs · Webhooks · SDKs · Postman · Supabase · BigQuery · cloud services · CI/CD",
+  },
+  {
+    label: "Automation / Orchestration",
+    items: "n8n · Make · Zapier · Clay",
+  },
+  {
+    label: "Business Platforms",
+    items: "Salesforce · HubSpot · Customer.io · Notion",
+  },
+];
+
+export default function Abilities() {
+  return (
+    <div className="capabilities">
+      <div className="capability-grid">
+        {capabilityGroups.map((group) => (
+          <section className="capability-group" key={group.title}>
+            <h3>{group.title}</h3>
+
+            <ul>
+              {group.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <section className="technology-section">
+        <h3>Selected Technologies</h3>
+
+        <div className="technology-list">
+          {technologyGroups.map((group) => (
+            <div className="technology-row" key={group.label}>
+              <h4>{group.label}</h4>
+              <p>{group.items}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="earlier-stack">
+          <h4>Earlier / Foundational Stack</h4>
+          <p>
+            Ruby on Rails · Ruby · jQuery · Firebase · MySQL · Bootstrap ·
+            Semantic UI
+          </p>
+        </div>
+      </section>
+    </div>
+  );
 }
-const experienceSubText = {
-	color: "#b1cbcc",
-  	fontSize: 26,
-  	padding: 20,
-  	opacity: 0.9
-}
-
-const skillsLine = {
-	background: "#b1cbcc",
-    width: 'auto',
-    margin: 'auto',
-    marginBottom: 60
-}
-
-const skillsText = {
-	color: "#6d8687",
-  	fontSize: 32,
-  	padding: 15,
-  	marginTop: 20,
-  	textAlign: 'left'
-}
-
-const EducationBlock = {
-	marginBottom: 20
-}
-const educationText = {
-	color: "#6d8687",
-  	fontSize: 32,
-  	padding: 15,
-  	marginTop: 20
-}
-
-const leftColText = {
-	color: "Black",
-  	fontSize: 16,
-  	fontFamily: "Didact Gothic",
-  	fontWeight: .1,
-  	lineHeight: 1.7,
-  	textAlign: 'left'
-}
-const rightColText ={
-	color: "Black",
-  	fontSize: 16,
-  	fontFamily: "Didact Gothic",
-  	fontWeight: .9,
-  	lineHeight: 1.7,
-  	textAlign: 'left'
-}
-const locIcon ={
-	color: '#757b7d',
-}
-
-const expDescription = {
-	color: '#6d8687'
-}
-
-const Abilities = 
-
-	<Grid stackable centered columns={3}>
-		<Grid.Row centered columns={2}>
-		    <Responsive as={Divider} style={skillsLine}> </Responsive>
-			<Grid.Column>
-				<Segment 
-					className="abilitesText"
-					basic 
-					textAlign='left'
-					style={skillsText}
-					>Skills
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="abilitesText"
-					basic
-					textAlign='left'
-					style={skillsText}><Icon name='wrench' size="small" />
-				</Segment>
-	      	</Grid.Column>
-		</Grid.Row>
-
-		<Grid.Row centered columns={2} style={EducationBlock}>		
-			<Grid.Column>
-			      <Segment 
-					className="abilitesText"
-					basic 
-					textAlign='left'
-					style={leftColText}
-					>
-					<LeftSkills />
-				</Segment>
-
-	  		</Grid.Column>
-	  		<Grid.Column>
-			    <Segment 
-					className="abilitesText"
-					basic 
-					textAlign='left'
-					style={rightColText}
-					>
-					<RightSkills />
-				</Segment>
-			</Grid.Column>
-		</Grid.Row>
-	</Grid>						
-
-export default Abilities;

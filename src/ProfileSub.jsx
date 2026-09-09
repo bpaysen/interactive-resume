@@ -1,40 +1,32 @@
-import React from 'react';
-import { Segment } from 'semantic-ui-react'
+import React from "react";
 
+const identities = [
+  "an AI Solutions Architect",
+  "a Systems Builder",
+  "a Developer",
+  "a Product Thinker",
+  "a Founder",
+  "a Classical Percussionist 🎶",
+];
 
-const profileSubText = {
-	color: "#6d8687",
-	margin: 80,
-  	fontSize: 24,
-  	padding: 0,
-  	opacity: 0.7,
+export default function ProfileSub() {
+  return (
+    <div className="identity" aria-label="Professional identities">
+      <span className="identity-prefix">I am</span>
 
+      <span className="identity-window" aria-hidden="true">
+        <span className="identity-list">
+          {identities.map((identity) => (
+            <span className="identity-item" key={identity}>
+              {identity}
+            </span>
+          ))}
+        </span>
+      </span>
+
+      <span className="sr-only">
+        {identities.join(", ")}
+      </span>
+    </div>
+  );
 }
-
-
-const profileSub =
-
-	<Segment 
-		className="profileSubText"
-		basic
-		textAlign='center'
-		style={profileSubText}> 					 					
-		<div className="cement">
-		  <div className="cement__container">
-		    <p className="cement__container__text">
-		      I am
-		    </p>
-		    <ul className="cement__container__list">
-		      <li className="cement__container__list__item"><i>a Front End</i> Developer</li>
-		      <li className="cement__container__list__item"><i>a Programmer</i></li>		      
-		      <li className="cement__container__list__item">a <i>Full Stack</i> Engineer</li>
-		      <li className="cement__container__list__item">an <i>Application</i> Developer</li>
-		      <li className="cement__container__list__item">a <i>Software</i> Engineer</li>
-		      <li className="cement__container__list__item">a <i>Classical Musician 🎶</i></li>
-		    </ul>
-		  </div>
-		</div>
-	</Segment>
-
-
-export default profileSub;

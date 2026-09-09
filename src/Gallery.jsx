@@ -1,178 +1,126 @@
-import React, { Component } from "react";
-import styled from "@emotion/styled";
-import { Grid, Responsive, Divider } from "semantic-ui-react";
+import React from "react";
 
+const currentProjects = [
+  {
+    title: "Studyapp",
+    type: "Full-Stack · Applied AI",
+    description:
+      "A deployed learning system that turns source material into targeted practice, evaluates responses, updates mastery, and determines what should be studied next.",
+    technologies:
+      "React · TypeScript · APIs · Authentication · AI-assisted evaluation · Production deployment",
+  },
+  {
+    title: "Evidence-Gated AI Enrichment",
+    type: "Agentic Systems · AI Reliability",
+    description:
+      "An enrichment and qualification system built around verified evidence, explicit policy, tool-using workflows, and careful handling of missing or conflicting information.",
+    technologies:
+      "Python · LLM tooling · APIs · Structured data · Evaluation · Policy workflows",
+  },
+  {
+    title: "Accel IQ Systems",
+    type: "Solution Architecture · Automation",
+    description:
+      "Selected AI, integration, enrichment, CRM, and operational systems designed and implemented across real client environments.",
+    technologies:
+      "AI agents · APIs · Webhooks · n8n · CRM integrations · Data workflows",
+  },
+  {
+    title: "Interactive Resume V2",
+    type: "React Modernization",
+    description:
+      "The modernization of this original React portfolio — preserving its interaction and visual identity while replacing its legacy build system, dependencies, and architecture.",
+    technologies:
+      "React · Vite · Modern CSS · Accessibility · Security remediation",
+  },
+];
 
-const skillsLine = {
-  background: "#b1cbcc",
-    width: 875,
-    margin: 'auto',
-    marginBottom: 50,
-    marginTop: 20
+const earlierProjects = [
+  {
+    title: "Environmental Activism",
+    description:
+      "An early React-based environmental information and advocacy project.",
+    technologies: "React · JavaScript · Firebase · UI design",
+    image: "/limantourSunset2.JPG",
+  },
+  {
+    title: "Composer's Personal Website",
+    description:
+      "A multimedia website combining custom design and development with music and media presentation.",
+    technologies: "JavaScript · TypeScript · AWS · Front-end development",
+    image: "/valentino-funghi-VRr9a2rOoBI-unsplash.jpg",
+  },
+  {
+    title: "Hunger & Homelessness Project",
+    description:
+      "An early full-stack project focused on resources and outreach around hunger and homelessness.",
+    technologies: "Ruby on Rails · JavaScript · PostgreSQL · AWS S3",
+  },
+];
+
+export default function Gallery() {
+  return (
+    <div className="projects">
+      <section className="projects-group">
+        <div className="projects-heading">
+          <h3>Selected Work</h3>
+          <p>
+            Products, systems, and implementations spanning applied AI,
+            integrations, automation, and full-stack development.
+          </p>
+        </div>
+
+        <div className="current-project-grid">
+          {currentProjects.map((project) => (
+            <article className="current-project" key={project.title}>
+              <p className="project-type">{project.type}</p>
+
+              <h4>{project.title}</h4>
+
+              <p className="project-description">{project.description}</p>
+
+              <p className="project-technologies">{project.technologies}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="projects-group earlier-projects">
+        <div className="projects-heading">
+          <h3>Earlier Work</h3>
+          <p>
+            Selected projects from the development work that helped shape the
+            path into product, solutions engineering, and applied systems.
+          </p>
+        </div>
+
+        <div className="earlier-project-grid">
+          {earlierProjects.map((project) => (
+            <article
+              className={`earlier-project${
+                project.image ? "" : " earlier-project--fallback"
+              }`}
+              key={project.title}
+              style={
+                project.image
+                  ? { backgroundImage: `url(${project.image})` }
+                  : undefined
+              }
+            >
+              <div className="earlier-project-overlay">
+                <h4>{project.title}</h4>
+
+                <div className="earlier-project-details">
+                  <p>{project.description}</p>
+                  <p className="project-technologies">
+                    {project.technologies}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
 }
-
-const DisplayOver = styled.div({
-  height: "100%",
-  left: "0",
-  position: "absolute",
-  top: "0",
-  width: "100%",
-  zIndex: 2,
-  transition: "background-color 350ms ease",
-  backgroundColor: "transparent",
-  padding: "20px 20px 0 20px",
-  boxSizing: "border-box",
-});
-
-const BigTitle = styled.h2({
-  // textTransform: "uppercase",
-  fontFamily: "Helvetica",
-});
-
-const Hover = styled.div({
-  opacity: 0,
-  transition: "opacity 350ms ease",
-});
-
-const SubTitle = styled.h4({
-  fontFamily: "Helvetica",
-  transform: "translate3d(0,50px,0)",
-  transition: "transform 350ms ease",
-});
-
-const Paragraph = styled.p({
-  transform: "translate3d(0,50px,0)",
-  transition: "transform 350ms ease",
-  position: "absolute",
-  bottom: "40px",
-  left: "20px",
-});
-
-const CTA = styled.a({
-  position: "absolute",
-  bottom: "20px",
-  left: "20px",
-});
-const EnvironmentBg = styled.div({
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  color: "#FFF",
-  position: "relative",
-  width: "400px",
-  height: "250px",
-  margin: "20px",
-  cursor: "pointer",
-  backgroundImage: "url(/limantourSunset2.JPG)",
-  [`:hover ${DisplayOver}`]: {
-  	backgroundColor: "rgba(0,0,0,.5)",
-  },
-  [`:hover ${SubTitle}, :hover ${Paragraph}`]: {
-    transform: "translate3d(0,0,0)",
-  },
-  [`:hover ${Hover}`]: {
-    opacity: 1,
-  },
-});
-const MusicBg = styled.div({
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  color: "#FFF",
-  position: "relative",
-  width: "400px",
-  height: "250px",
-  margin: "20px",
-  cursor: "pointer",
-  backgroundImage: "url(/valentino-funghi-VRr9a2rOoBI-unsplash.jpg)",
-  [`:hover ${DisplayOver}`]: {
-  	backgroundColor: "rgba(0,0,0,.5)",
-  },
-  [`:hover ${SubTitle}, :hover ${Paragraph}`]: {
-    transform: "translate3d(0,0,0)",
-  },
-  [`:hover ${Hover}`]: {
-    opacity: 1,
-  },
-});
-
-const HungerOutreachSite = styled.div({
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  color: "#FFF",
-  position: "relative",
-  width: "400px",
-  height: "250px",
-  margin: "20px",
-  cursor: "pointer",
-  backgroundImage: "url(/saketh-garuda-fXlkomo5tCQ-unsplash.jpg)",
-  [`:hover ${DisplayOver}`]: {
-    backgroundColor: "rgba(0,0,0,.5)",
-  },
-  [`:hover ${SubTitle}, :hover ${Paragraph}`]: {
-    transform: "translate3d(0,0,0)",
-  },
-  [`:hover ${Hover}`]: {
-    opacity: 1,
-  },
-});
-
-
-
-class Gallery extends Component {
-	render() {
-		return(
-			<Grid columns={2}>
-      <Responsive as={Divider} style={skillsLine}> </Responsive>
-        <Grid.Row>
-  				<Grid.Column className="EnvironmentalSite" >
-  					<EnvironmentBg alt="Photo by Valentino Funghi on Unsplash">
-  						<DisplayOver>
-  							<BigTitle>Environmental Activism</BigTitle>
-  							<Hover>
-  								<SubTitle>An environmental guide in a defining moment..</SubTitle>
-  								<Paragraph>
-  									Tags: Design, Development, Founder, React.js, Bootstrap, 
-  								</Paragraph>
-  								<CTA>visit website +</CTA>
-  							</Hover>
-  						</DisplayOver>
-  					</EnvironmentBg>
-  				</Grid.Column>
-  				<Grid.Column className="MusicSite" >
-  					<MusicBg alt="Photo by Valentino Funghi on Unsplash">
-  						<DisplayOver>
-  							<BigTitle>Composer's personal website</BigTitle>
-  							<Hover>
-  								<SubTitle>A multimedia site of compositions and media projects.</SubTitle>
-  								<Paragraph>
-  									Tags: Design, Development, Creator, Javascript, Typescript, AWS
-  								</Paragraph>
-  								<CTA>visit website +</CTA>
-  							</Hover>
-  						</DisplayOver>
-  					</MusicBg>
-  				</Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column className="HungerOutreachSite" >
-            <HungerOutreachSite alt="Photo by Saketh Garuda on Unsplash">
-              <DisplayOver>
-                <BigTitle>Hunger and Homelessness Project</BigTitle>
-                <Hover>
-                  <SubTitle>Helping Humans in crisis break the chains of poverty.</SubTitle>
-                  <Paragraph>
-                    Tags: Design, Development, Founder, Ruby on Rails, PostgreSQL
-                  </Paragraph>
-                  <CTA>visit website +</CTA>
-                </Hover>
-              </DisplayOver>
-            </HungerOutreachSite>
-          </Grid.Column>
-        </Grid.Row>
-			</Grid>
-
-		);
-	}
-}
-
-export default Gallery;
