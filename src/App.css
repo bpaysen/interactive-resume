@@ -200,6 +200,13 @@ html {
     scroll-behavior: auto;
   }
 
+  .hero-name,
+  .hero-content hr.coverLine,
+  .hero-focus,
+  .hero-label {
+    animation: none;
+  }
+
   .hero-jump {
     animation: none;
   }
@@ -241,11 +248,100 @@ html {
   line-height: 1;
 }
 
-.hero-label {
-  margin: 1rem 0 0;
+.hero-role {
+  position: relative;
+  margin: 1.25rem 0 0;
   color: white;
-  font-size: clamp(1.3rem, 3vw, 2.25rem);
+  font-size: clamp(1.15rem, 2.6vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.hero-role--typing .hero-role__sizer {
+  visibility: hidden;
+}
+
+.hero-role--typing .hero-role__typed {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-role__caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 0.12em;
+  background: rgba(255, 255, 255, 0.85);
+  vertical-align: -0.14em;
+}
+
+.hero-focus {
+  margin: 0.9rem 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(0.92rem, 1.5vw, 1.15rem);
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+.hero-label {
+  margin: 2.25rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  letter-spacing: 0.06em;
   line-height: 1.2;
+}
+
+/* One-time entrance. Nothing here loops. */
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-divider {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.hero-name {
+  animation: hero-rise 700ms ease-out both;
+}
+
+.hero-content hr.coverLine {
+  transform-origin: center;
+  animation: hero-divider 600ms ease-out 400ms both;
+}
+
+.hero-focus {
+  animation: hero-fade 700ms ease-out 1950ms both;
+}
+
+.hero-label {
+  animation: hero-fade 800ms ease-out 2700ms both;
 }
 
 .resume-layout {
@@ -278,9 +374,87 @@ html {
   z-index: 10;
 }
 
+.resume-nav-bar {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .resume-nav-rail {
     display: none;
+  }
+
+  .resume-nav-bar {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .resume-nav-bar .site-nav {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0;
+    box-shadow: 0 1px 6px rgba(25, 32, 33, 0.25);
+    scrollbar-width: none;
+  }
+
+  .resume-nav-bar .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .resume-nav-bar .site-nav__top {
+    flex: 0 0 auto;
+    width: 1.9rem;
+    height: 2.6rem;
+    font-size: 1.15rem;
+  }
+
+  .resume-nav-bar .site-nav__items {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+  .resume-nav-bar .site-nav__items li {
+    flex: 1 1 auto;
+  }
+
+  .resume-nav-bar .site-nav__link {
+    padding: 0 0.2rem;
+    border-top: 0;
+    border-left: 2px solid rgba(255, 255, 255, 0.45);
+    border-radius: 0;
+    font-size: 0.56rem;
+    letter-spacing: 0.05em;
+    line-height: 2.6rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .resume-nav-bar .site-nav__link:hover,
+  .resume-nav-bar .site-nav__link:focus-visible {
+    letter-spacing: 0.06em;
+  }
+
+  .section {
+    scroll-margin-top: 2.6rem;
+  }
+}
+
+/* Below ~360px the five section links need the whole bar. */
+
+@media (max-width: 360px) {
+  .resume-nav-bar .site-nav__top {
+    display: none;
+  }
+
+  .resume-nav-bar .site-nav__link {
+    padding: 0 0.15rem;
+  }
+
+  .resume-nav-bar .site-nav__items li:first-child .site-nav__link {
+    border-left: 0;
   }
 }
 
@@ -401,7 +575,7 @@ html {
   justify-content: center;
   gap: 0.5rem;
   min-height: 2.5rem;
-  color: #6d8687;
+  color: #5c7071;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
 

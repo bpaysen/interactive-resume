@@ -1,5 +1,6 @@
 import "./App.css";
 import image1 from "./tree-bg-resume.jpg";
+import HeroRole from "./Components/HeroRole";
 import JumpButton from "./Components/JumpButton";
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
@@ -25,14 +26,25 @@ export default function App() {
 
               <hr className="coverLine" />
 
-                <p className="hero-label">
-                  <i>interactive resume</i>
-                </p>
+              <HeroRole text="AI Solutions Architect · Systems Builder" />
+
+              <p className="hero-focus">
+                Applied AI · Product &amp; Platform Integrations ·
+                Forward-Deployed Engineering
+              </p>
+
+              <p className="hero-label">
+                <i>interactive résumé</i>
+              </p>
             </div>
           </header>
       </div>
 
       <div className="resume-layout">
+        <div className="resume-nav-bar">
+          <Navbar />
+        </div>
+
         <main className="resume-main">
           <Section
             title="Profile"
@@ -53,8 +65,6 @@ export default function App() {
 
           <Section
             title="Capabilities"
-            quote="No good deed goes unpunished."
-            attribution=" ―Oscar Wilde"
             copy={<Abilities />}
             dark={false}
             id="abilities"
