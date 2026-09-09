@@ -378,7 +378,10 @@ html {
   display: none;
 }
 
-@media (max-width: 1200px) {
+/* The rail is absolutely positioned beside the content column, so it only
+   has room to clear it above ~1500px. Narrower viewports use the top bar. */
+
+@media (max-width: 1500px) {
   .resume-nav-rail {
     display: none;
   }

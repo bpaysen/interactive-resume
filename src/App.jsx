@@ -65,6 +65,8 @@ export default function App() {
 
           <Section
             title="Capabilities"
+            quote="The details are not the details. They make the design."
+            attribution=" ―Charles Eames"
             copy={<Abilities />}
             dark={false}
             id="abilities"
