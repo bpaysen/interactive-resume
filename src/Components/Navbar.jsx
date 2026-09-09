@@ -1,5 +1,3 @@
-import React from "react";
-
 const navigation = [
   { href: "#profile", label: "Profile" },
   { href: "#experience", label: "Experience" },

@@ -1,5 +1,3 @@
-import React from "react";
-
 const currentProjects = [
   {
     title: "Studyapp",
@@ -101,6 +99,7 @@ export default function Gallery() {
                 project.image ? "" : " earlier-project--fallback"
               }`}
               key={project.title}
+              tabIndex={0}
               style={
                 project.image
                   ? { backgroundImage: `url(${project.image})` }

@@ -1,5 +1,3 @@
-import React from "react";
-
 const capabilityGroups = [
   {
     title: "Applied AI & Intelligent Systems",
@@ -21,7 +19,6 @@ const capabilityGroups = [
       "Backend and full-stack development",
       "REST APIs",
       "SQL and relational data",
-      "Backend and full-stack application development",
     ],
   },
   {

@@ -1,4 +1,3 @@
-import React from "react";
 import profileImg from "./ProfileImg-v2.jpg";
 
 export default function Profile() {

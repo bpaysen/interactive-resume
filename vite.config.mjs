@@ -1,12 +1,3 @@
 import { defineConfig } from "vite";
 
-export default defineConfig({
-  oxc: {
-    jsx: {
-      runtime: "classic",
-    },
-  },
-  build: {
-    cssMinify: false,
-  },
-});
+export default defineConfig({});

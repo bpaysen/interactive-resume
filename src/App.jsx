@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import image1 from "./tree-bg-resume.jpg";
 import JumpButton from "./Components/JumpButton";

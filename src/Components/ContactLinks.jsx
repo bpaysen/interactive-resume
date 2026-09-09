@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ContactLinks() {
   return (
     <nav className="contact-links" aria-label="Contact links">
